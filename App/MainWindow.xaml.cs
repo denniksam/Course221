@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using App.Data;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +17,17 @@ namespace App
 	/// </summary>
 	public partial class MainWindow : Window
 	{
+		private readonly DataContext dataContext;
 		public MainWindow()
 		{
 			InitializeComponent();
+			dataContext = new();
 		}
 	}
 }
+/* Підключення EF до PlanetScale
+ * NuGet:
+ * - Microsoft.EntityFrameworkCore
+ * - Microsoft.EntityFrameworkCore.Tools
+ * - Pomelo.EntityFrameworkCore.MySql
+ */
